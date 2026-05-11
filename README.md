@@ -22,23 +22,7 @@
 5. 浏览器打开 **`http://127.0.0.1:5000`**（端口以程序提示为准）。
 **数据存放**：作品、SQLite 数据库、上传文件与向量库默认位于 exe 同目录或程序指定的 `data` 文件夹（以打包配置为准）；卸载前请自行备份。
 ---
-## 从源码运行（开发者）
-环境建议：**Python 3.11+**
-```bash
-git clone https://github.com/zhaimaoNB/novel-agent-pro.git
-cd novel-agent-pro
-python -m venv venv
-venv\Scripts\activate          # Windows
-pip install -r requirements.txt
-启动前设置环境变量（示例）：
 
-SECRET_KEY=请换成随机长字符串
-ADMIN_USERNAME=admin
-ADMIN_PASSWORD=首次启动创建管理员用的密码
-可选：DEEPSEEK_BASE_URL、DEEPSEEK_CHAT_MODEL、LOCAL_EMBEDDING_MODEL、HF_ENDPOINT（镜像）等，详见 config.py。
-
-python app.py
-浏览器访问：http://127.0.0.1:5000
 
 首次使用提示
 使用管理员账号登录；若开放注册，新用户可能需要管理员审核后才能使用写作与知识库等功能。
@@ -52,7 +36,6 @@ Python · Flask · SQLite · ChromaDB · sentence-transformers（embedding）· 
 
 联系与交流
 作者：宅子里的猫
-仓库：novel-agent-pro
 微信：fengyu3061（技术交流或商务合作）
 致谢
 感谢所有试用与反馈的朋友。
