@@ -1,0 +1,58 @@
+# 妙笔生花 · Novel Agent
+本地运行的 **长篇小说创作助手**：管理作品与章节、维护世界观与人物，集成 **DeepSeek** 等大模型辅助写作，并通过 **知识库（RAG）** 让设定与资料随写随查。数据默认保存在本机，适合希望「打开即用、稿子在自己电脑上」的作者与爱好者。
+> **分发形态（规划）**  
+> 计划提供 **Windows 单文件 `.exe`**：双击启动内置 Web 服务后，在浏览器访问提示的本地地址即可使用，无需单独安装 Python。  
+> 下列「下载安装」一节将在首个 exe 发布后为正式下载说明；在此之前可先使用「从源码运行」。
+---
+## 功能概览
+| 模块 | 说明 |
+|------|------|
+| **作品与章节** | 多本小说、分章管理；维护世界观、人物、伏笔等创作素材 |
+| **AI 辅助写作** | 基于兼容 OpenAI API 的服务（默认 DeepSeek）生成、续写与调整正文 |
+| **知识库 RAG** | 上传文本资料，写作时语义检索引用，减少设定冲突与反复翻找 |
+| **账号体系** | 登录注册（可选管理员审核）；管理员可管理用户 |
+| **产品介绍页** | 内置 `/about`，便于了解产品与设计理念 |
+调用云端 API **需用户自备 API Key**（在「账号设置」中配置）。知识库使用的向量模型会在首次使用时按需下载（体积与网络环境有关）。
+---
+## 下载安装（exe · 敬请期待）
+1. 从 **[Releases](https://github.com/zhaimaoNB/novel-agent-pro/releases)** 下载最新 Windows 安装包或绿色压缩包（发布后更新此链接）。
+2. 解压到任意目录（避免路径中含特殊字符）。
+3. 双击 **`妙笔生花.exe`**（文件名以实际发布为准）。
+4. 若防火墙提示，允许专用网络访问。
+5. 浏览器打开 **`http://127.0.0.1:5000`**（端口以程序提示为准）。
+**数据存放**：作品、SQLite 数据库、上传文件与向量库默认位于 exe 同目录或程序指定的 `data` 文件夹（以打包配置为准）；卸载前请自行备份。
+---
+## 从源码运行（开发者）
+环境建议：**Python 3.11+**
+```bash
+git clone https://github.com/zhaimaoNB/novel-agent-pro.git
+cd novel-agent-pro
+python -m venv venv
+venv\Scripts\activate          # Windows
+pip install -r requirements.txt
+启动前设置环境变量（示例）：
+
+SECRET_KEY=请换成随机长字符串
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=首次启动创建管理员用的密码
+可选：DEEPSEEK_BASE_URL、DEEPSEEK_CHAT_MODEL、LOCAL_EMBEDDING_MODEL、HF_ENDPOINT（镜像）等，详见 config.py。
+
+python app.py
+浏览器访问：http://127.0.0.1:5000
+
+首次使用提示
+使用管理员账号登录；若开放注册，新用户可能需要管理员审核后才能使用写作与知识库等功能。
+在「账号设置」中填写 DeepSeek（或兼容接口）API Key 后再使用 AI 相关功能。
+首次使用知识库 embedding 时可能下载模型，请保持网络畅通；国内环境可配置 HuggingFace 镜像。
+技术栈（简要）
+Python · Flask · SQLite · ChromaDB · sentence-transformers（embedding）· 兼容 OpenAI API 的聊天接口
+
+开源与许可
+授权方式：
+
+联系与交流
+作者：宅子里的猫
+仓库：novel-agent-pro
+微信：fengyu3061（技术交流或商务合作）
+致谢
+感谢所有试用与反馈的朋友。
