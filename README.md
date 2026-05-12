@@ -77,7 +77,9 @@ Python · Flask · SQLite · 兼容 OpenAI API 的聊天接口
 ---
 
 ## 妙笔生花文创智能体交流群
-### 扫码加入交流群
+- **创作交流**：写作节奏、设定管理、与 AI 协作方式等经验分享。  
+- **软件相关**：安装与使用问题、功能建议、BUG 反馈。  
+- **更新资讯**：新版本说明与注意事项会在群内提醒
 <img width="798" height="864" alt="image" src="https://github.com/user-attachments/assets/c302dacb-d152-4940-81a4-7d4860d056b7" />
 
 
