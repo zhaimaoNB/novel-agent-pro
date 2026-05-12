@@ -3,7 +3,7 @@
 本地运行的 **长篇小说创作助手**：管理作品与章节、维护世界观与人物，集成 **DeepSeek** 等大模型辅助写作，并通过 **知识库（RAG）** 在写作时检索设定与资料。数据默认保存在本机，适合希望「打开即用、稿子在自己电脑上」的作者与爱好者。
 
 > **分发形态**  
-> 已支持 **Windows 绿色包（PyInstaller onedir）**：解压后双击 **`MiaoBiShengHua.exe`** 启动内置 Web 服务，在浏览器访问 **`http://127.0.0.1:5000`** 即可使用，无需单独安装 Python。构建方式见仓库内 `novel-agent.spec`（本地需 Python 3.11+ 与依赖，执行 `pyinstaller novel-agent.spec`）。  
+> 已支持 **Windows 压缩包**：解压后双击 **`MiaoBiShengHua.exe`** 启动内置 Web 服务，在浏览器访问 **`http://127.0.0.1:5000`** 即可使用，无需单独安装 Python。  
 > 更详细的桌面端说明见 **`使用说明.txt`**（含管理员与普通用户区别、RAG 使用建议等）。
 
 ---
@@ -20,7 +20,7 @@
 
 调用云端 API **需用户自备 API Key**（在「账号设置」中配置）。
 
-**关于向量与 RAG（避免读 README 时误解）**
+**关于向量与 RAG）**
 
 - **从源码运行（源码优化后上传Git）**：默认使用 **sentence-transformers**（如 BAAI/bge-small-zh-v1.5）+ **ChromaDB** 持久化；首次用嵌入时可能从 HuggingFace 拉取模型，请保持网络畅通（国内可配镜像）。
 - **Windows 打包版（exe）**：默认使用 **本地哈希向量 + SQLite**（`data/rag_vectors.sqlite3`）做检索，**不依赖** Chroma 的 HNSW，也**不要求**为知识库去下 BGE；可选环境变量 `MIAOBI_TRY_ONNX=1` 尝试 ONNX MiniLM（需本机 ONNX 正常，且与哈希非同一向量空间，切换后需重建知识库）。详见 `使用说明.txt`。
@@ -75,6 +75,15 @@ Python · Flask · SQLite · 兼容 OpenAI API 的聊天接口
 - **微信**：fengyu3061（技术交流或商务合作）
 
 ---
+
+## 妙笔生花文创智能体交流群
+### 扫码加入交流群
+<img width="798" height="864" alt="image" src="https://github.com/user-attachments/assets/c302dacb-d152-4940-81a4-7d4860d056b7" />
+
+
+
+
+
 
 ## 致谢
 
