@@ -80,8 +80,8 @@ Python · Flask · SQLite · 兼容 OpenAI API 的聊天接口
 - **创作交流**：写作节奏、设定管理、与 AI 协作方式等经验分享。  
 - **软件相关**：安装与使用问题、功能建议、BUG 反馈。  
 - **更新资讯**：新版本说明与注意事项会在群内提醒
-<img width="240" height="260" alt="image" src="https://github.com/user-attachments/assets/c302dacb-d152-4940-81a4-7d4860d056b7" />
 
+<img width="240" height="260" alt="c1d7d7baf0f1a52c835c80f44f64bf95" src="https://github.com/user-attachments/assets/9f5e4af5-b31d-4bbd-b2eb-51d53cc8df34" />
 
 
 
