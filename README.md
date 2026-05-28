@@ -81,7 +81,8 @@ Python · Flask · SQLite · 兼容 OpenAI API 的聊天接口
 - **软件相关**：安装与使用问题、功能建议、BUG 反馈。  
 - **更新资讯**：新版本说明与注意事项会在群内提醒
 
-<img width="240" height="260" alt="c1d7d7baf0f1a52c835c80f44f64bf95" src="https://github.com/user-attachments/assets/9f5e4af5-b31d-4bbd-b2eb-51d53cc8df34" />
+
+<img width="240" height="360" alt="d7fb1d45b7ffba1661226bf9b6d15f21" src="https://github.com/user-attachments/assets/446d6fc4-4a15-43f0-ad2f-657e50b65d43" />
 
 
 
